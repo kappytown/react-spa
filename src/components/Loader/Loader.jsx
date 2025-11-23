@@ -109,8 +109,8 @@ const Loader = () => {
 				<>
 					{loader.show && (
 						<div className='wrapper'>
-							<div className='message'>{loader.message}</div>
-							<img src='assets/img/loading.gif' alt='Loading' />
+							<div className="message">{loader.message}</div>
+							<div className="spinner-border text-primary" role="status"></div>
 						</div>
 					)}
 
