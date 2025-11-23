@@ -1,0 +1,36 @@
+.loading-outer {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .5);
+	z-index: 100;
+
+	.wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: var(--ot-white);
+
+		display: flex;
+		gap: .5rem;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.progressbar {
+			height: 2rem;
+			width: 20rem;
+			background-color: var(--ot-white);
+			border: .1rem solid var(--ot-white);
+
+			.bar {
+				width: 0%;
+				height: 1.8rem;
+				background-color: #00b9ff;
+			}
+		}
+	}
+}

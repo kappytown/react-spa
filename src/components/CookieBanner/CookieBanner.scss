@@ -1,0 +1,21 @@
+#cookieConsentBanner {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #5c606c;
+	color: #fff;
+	padding: 1.5rem 2rem;;
+	text-align: center;
+	z-index: 1040;
+	box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+
+	&.hidden {
+		display: none;
+	}
+}

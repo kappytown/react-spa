@@ -1,0 +1,114 @@
+:root {
+	--ot-progress-blue: #0eaeeb;
+	--ot-progress-green: #4fc0b2;
+	--ot-progress-orange: #f18c5a;
+	--ot-progress-yellow: #eec352;
+	--ot-progress-color: var(--ot-goal-green);
+}
+
+.progresscircle {
+	.progress-circle {
+		transform: rotate(-90deg);
+		background-color: transparent;
+	}
+
+	.progress-circle-back {
+		fill: none;
+		stroke: #D2D2D2;
+		/*
+		stroke-width: 4px;
+		*/
+	}
+
+	.progress-circle-prog {
+		fill: none;
+		stroke: var(--ot-progress-color);
+		/*
+		stroke-width: 4px;
+		stroke-dasharray: 144.51;
+		stroke-dashoffset: 144.51;
+		*/
+		transition: stroke-dashoffset 1.5s;
+	}
+
+	.progress-text {
+		width: 100%;
+		height: 50px;
+		position: absolute;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+	}
+
+	.dots {
+		display: block;
+		position: absolute;
+		top: 0;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		transition: 1.5s transform, 1.5s opacity ease-in-out;
+
+		&::after {
+			position: absolute;
+			content: '';
+			width: 8px;
+			height: 8px;
+			top: -2px;
+			left: 50%;
+			border-radius: 50%;
+			background-color: #fff; /*#00fcff;*/
+			box-shadow: 0 0 2px 1px #202020;
+			transform: translateX(-50%);
+		}
+	}
+
+	&.lg {
+		/*
+		.progress-circle-back {
+			stroke-width: 8px;
+		}
+		.progress-circle-prog {
+			stroke-width: 8px;
+			stroke-dasharray: 289.03;
+			stroke-dashoffset: 289.03;
+		}
+			*/
+		.progress-text {
+			height: 100px;
+			font-size: 20px;
+		}
+		.dots::after {
+			width: 15px;
+			height: 15px;
+			top: -3px;
+		}
+	}
+}
+
+.progresscircle.green {
+	.progress-circle-prog {
+		stroke: var(--ot-progress-green);
+	}
+}
+
+.progresscircle.blue {
+	.progress-circle-prog {
+		stroke: var(--ot-progress-blue);
+	}
+}
+
+.progresscircle.orange {
+	.progress-circle-prog {
+		stroke: var(--ot-progress-orange);
+	}
+}
+
+.progresscircle.yellow {
+	.progress-circle-prog {
+		stroke: var(--ot-progress-yellow);
+	}
+}
