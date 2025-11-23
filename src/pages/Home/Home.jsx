@@ -117,7 +117,7 @@ const Home = (props) => {
 					</div>
 				</div>
 
-				<div className='row mb-5'>
+				<div className='row g-4 mb-5'>
 				{stats && (
 					<>
 					<div className='col-12 col-sm-6 col-lg-3'>
