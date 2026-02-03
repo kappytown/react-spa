@@ -1,1 +1,5 @@
-#my_account {}
+#my_account {
+	.account-details button:not(.btn-danger) {
+		margin-right: 5px;
+	}
+}
