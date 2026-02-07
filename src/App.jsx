@@ -182,7 +182,7 @@ const App = () => {
 			{(sessionStatus === 'error' || sessionStatus === 'complete') && (
 				<>
 					<LastUpdated />
-					<Suspense fallback={<FallBack message='Loading...' />} key={window.location.hash}>
+					<Suspense fallback={<FallBack message='Loading...' />}>
 						<Routes>
 							{/* Redirects to home if user is authenticated */}
 							<Route path='/' element={<AuthRoute />}>
